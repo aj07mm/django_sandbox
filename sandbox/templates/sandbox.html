@@ -1,0 +1,22 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% block content %}
+            <h1>Person<h1>
+            <ul>
+                {% for person in persons %}
+                    <li>{{person.name}}</li>
+                    <li>{{person.get_inviter_reason}}</li>
+                {% endfor %}
+            </ul>
+
+            <h1>Groups<h1>
+            <ul>
+                {% for group in groups %}
+                    <li>{{group.name}}</li>
+                {% endfor %}
+            </ul>
+        {% endblock%}
+    </body>
+</html>
